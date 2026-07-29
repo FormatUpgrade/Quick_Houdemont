@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Format'Upgrade x Quick Houdemont</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="bg-photo"></div>
+<div class="bg-overlay"></div>
+
+<div class="app">
+
+  <!-- ===================== HUB ===================== -->
+  <section id="screen-hub" class="screen active">
+    <div class="hub-header">
+      <img src="Autres/Quickos_2.png" alt="Quickos" class="hub-mascot">
+      <h1 class="hub-title">Team<span>Quick</span> Houdemont</h1>
+      <p class="hub-subtitle">Révise, joue, progresse.</p>
+    </div>
+
+    <div class="hub-grid">
+      <div class="activity-card" id="card-quiz">
+        <div class="activity-icon">🍔</div>
+        <div class="activity-info">
+          <h3>Questions pour un Giant</h3>
+          <p>Quiz sur les process, produits et normes Quick</p>
+        </div>
+      </div>
+
+      <div class="activity-card" id="card-blurger">
+        <div class="activity-icon">🌀</div>
+        <div class="activity-info">
+          <h3>Blur-Ger</h3>
+          <p>Devine le produit avant qu'il ne soit trop net</p>
+        </div>
+      </div>
+
+      <div class="activity-card" id="card-revision">
+        <div class="activity-icon">📖</div>
+        <div class="activity-info">
+          <h3>Fiches de révision</h3>
+          <p>Toutes les réponses du quiz, à consulter librement</p>
+        </div>
+      </div>
+
+      <div class="activity-card locked">
+        <div class="activity-icon">📝</div>
+        <div class="activity-info">
+          <h3>Évaluation</h3>
+          <p>Test noté transmis au manager</p>
+          <span class="locked-badge">🥡 Garnissage en cours</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== QUIZ : choix du mode ===================== -->
+  <section id="screen-quiz-mode" class="screen">
+    <div class="game-header" id="quiz-mode-header">
+      <button class="btn-back" data-back>← Menu</button>
+    </div>
+    <div class="mode-select">
+      <h2>Questions pour un Giant</h2>
+      <p class="subtitle">15 questions par session. Choisis ton mode :</p>
+      <div class="mode-options">
+        <button class="mode-btn primary" id="mode-aleatoire">
+          <strong>🎲 Mode Défi</strong>
+          <span>Tirage 100% aléatoire, difficultés mélangées</span>
+        </button>
+        <button class="mode-btn" id="mode-equilibre">
+          <strong>⚖️ Mode Équilibré</strong>
+          <span>6 faciles, 6 moyennes, 3 difficiles</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== QUIZ : jeu ===================== -->
+  <section id="screen-quiz-play" class="screen">
+    <div class="game-header" id="quiz-game-header"></div>
+    <div id="quiz-content"></div>
+  </section>
+
+  <!-- ===================== BLUR-GER : jeu ===================== -->
+  <section id="screen-blurger-play" class="screen">
+    <div class="game-header" id="blurger-game-header"></div>
+    <div id="blurger-content"></div>
+  </section>
+
+  <!-- ===================== FICHES DE REVISION ===================== -->
+  <section id="screen-revision" class="screen">
+    <div class="game-header">
+      <span class="display" style="font-size:18px;">Fiches de révision</span>
+      <button class="btn-back" data-back>← Menu</button>
+    </div>
+    <div class="revision-list" id="revision-list"></div>
+  </section>
+
+</div>
+
+<script src="js/questions.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

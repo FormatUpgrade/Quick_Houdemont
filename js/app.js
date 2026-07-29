@@ -116,7 +116,7 @@ function launchQuiz(mode) {
   const questions = buildQuizSet(mode);
   quizState = { questions, index: 0, score: 0, log: [], answered: false };
   showScreen("screen-quiz-play");
-  playSplash("Autres/Logo_Quizz_Quick.png", "quiz-game-header", renderQuizQuestion);
+  playSplash("Autres/Logo_Quick_Quizz.png", "quiz-game-header", renderQuizQuestion);
 }
 
 function buildQuizSet(mode) {
